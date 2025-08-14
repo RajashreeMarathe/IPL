@@ -15,6 +15,7 @@ public class TeamService {
 		System.out.println("Please select Following options ");
 		System.out.println("1. Get All Team Details");
 		
+		
 		int input=sc.nextInt();
 		System.out.println("You have selcted optin : "+input);
 		
@@ -23,7 +24,51 @@ public class TeamService {
 		
 		case 1:{
 			System.out.println(TeamRepository.getMITeamDetails());
+			
+			break;
+		}
+		case 2:{
 			System.out.println(TeamRepository.getCskTeamDetails());
+			
+			break;
+		}
+		case 3:{
+			System.out.println(TeamRepository.getKkrTeamDetails());
+			
+			break;
+		}
+		case 4:{
+			System.out.println(TeamRepository.getDcTeamDetails());
+			
+			break;
+		}
+		case 5:{
+			System.out.println(TeamRepository.getGtTeamDetails());
+			break;
+		}
+		case 6:{
+			System.out.println(TeamRepository.getLsgTeamDetails());
+			
+			break;
+		}
+		case 7:{
+			System.out.println(TeamRepository.getPkTeamDetails());
+			
+			break;
+		}
+		case 8:{
+			System.out.println(TeamRepository.getRcbTeamDetails());
+			
+			break;
+		}
+		case 9:{
+			System.out.println(TeamRepository.getRrTeamDetails());
+			
+			break;
+		}
+		case 10:{
+			System.out.println(TeamRepository.getShTeamDetails());
+			
 			break;
 		}
 		
