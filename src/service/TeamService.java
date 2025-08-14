@@ -1,13 +1,43 @@
 package service;
 
+import java.util.Scanner;
+
 import entity.Team;
 import repository.TeamRepository;
 
 public class TeamService {
 	
+	
+	public void selectOptions()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Welcome to the IPL Portal");
+		System.out.println("Please select Following options ");
+		System.out.println("1. Get All Team Details");
+		
+		int input=sc.nextInt();
+		System.out.println("You have selcted optin : "+input);
+		
+		switch(input) {
+		//get all team details
+		
+		case 1:{
+			System.out.println(TeamRepository.getMITeamDetails());
+			System.out.println(TeamRepository.getCskTeamDetails());
+			break;
+		}
+		
+	    default :
+	    	System.out.println("Invalid input :"+input);
+		}
+		
+	}
+	
+	
 	public void printTeamDetails()
 	{
-
+		
+		
 		Team team=TeamRepository.getMITeamDetails();		
 		System.out.println(team.getId());
 		System.out.println(team.getTeamName());
@@ -15,6 +45,7 @@ public class TeamService {
 		System.out.println(team.getCoachName());
 		System.out.println(team.getNRR());
 		System.out.println(team.getIsQualified());
+		
 		
 		Team team1=TeamRepository.getCskTeamDetails();
 		System.out.println(team1.getId());

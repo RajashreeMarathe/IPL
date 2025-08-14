@@ -14,7 +14,15 @@ public class Team {
 	
 	private boolean isQualified;
 	
+	
+	@Override
+	public String toString() {
+		return "Team [id=" + id + ", teamName=" + teamName + ", captainName=" + captainName + ", coachName=" + coachName
+				+ ", nRR=" + nRR + ", isQualified=" + isQualified + "]";
+	}
+	
 	//setter-getter
+	
 	
 	public void setId(int id)
 	{
