@@ -14,6 +14,8 @@ public class TeamService {
 		System.out.println("Welcome to the IPL Portal");
 		System.out.println("Please select Following options ");
 		System.out.println("1. Get All Team Details");
+		System.out.println("2.Get All Team Details by short name");
+		
 		
 		
 		int input=sc.nextInt();
@@ -24,59 +26,94 @@ public class TeamService {
 		
 		case 1:{
 			System.out.println(TeamRepository.getMITeamDetails());
-			
-			break;
-		}
-		case 2:{
 			System.out.println(TeamRepository.getCskTeamDetails());
-			
-			break;
-		}
-		case 3:{
 			System.out.println(TeamRepository.getKkrTeamDetails());
-			
-			break;
-		}
-		case 4:{
 			System.out.println(TeamRepository.getDcTeamDetails());
-			
-			break;
-		}
-		case 5:{
 			System.out.println(TeamRepository.getGtTeamDetails());
-			break;
-		}
-		case 6:{
 			System.out.println(TeamRepository.getLsgTeamDetails());
-			
-			break;
-		}
-		case 7:{
 			System.out.println(TeamRepository.getPkTeamDetails());
-			
-			break;
-		}
-		case 8:{
 			System.out.println(TeamRepository.getRcbTeamDetails());
-			
-			break;
-		}
-		case 9:{
 			System.out.println(TeamRepository.getRrTeamDetails());
-			
-			break;
-		}
-		case 10:{
 			System.out.println(TeamRepository.getShTeamDetails());
+			
+			System.out.println(" Here is your details");
 			
 			break;
 		}
 		
+		//get deatils by short name
+		case 2 : 
+		{
+			System.out.println("Please Enter Your fav team short name and get all info:" );
+			String teamShortName=sc.next();
+			System.out.println("Entered team short name is : " +teamShortName);
+			getTeamByShortName(teamShortName);
+			
+		}
 	    default :
 	    	System.out.println("Invalid input :"+input);
 		}
 		
 	}
+	
+	private  void getTeamByShortName(String shortName)
+	{
+		switch(shortName)
+		{
+		case "MI":
+		{
+			System.out.println(TeamRepository.getMITeamDetails());
+			break;
+		}
+		case "CSK":
+		{
+			System.out.println(TeamRepository.getCskTeamDetails());
+			break;
+		}
+		case "KKR":
+		{
+			System.out.println(TeamRepository.getKkrTeamDetails());
+			break;
+		}
+		case "DC":
+		{
+			System.out.println(TeamRepository.getDcTeamDetails());
+			break;
+		}
+		case "GT":
+		{
+			System.out.println(TeamRepository.getGtTeamDetails());
+			break;
+		}
+		case "LSG":
+		{
+			System.out.println(TeamRepository.getLsgTeamDetails());
+			break;
+		}
+		case "PK":
+		{
+			System.out.println(TeamRepository.getPkTeamDetails());
+			break;
+		}
+		case "SH":
+		{
+			System.out.println(TeamRepository.getShTeamDetails());
+			break;
+		}
+		case "RR":
+		{
+			System.out.println(TeamRepository.getRrTeamDetails());
+			break;
+		}
+		case "RCB":
+		{
+			System.out.println(TeamRepository.getRcbTeamDetails());
+			break;
+		}
+		
+		}
+	}
+	
 	
 	
 	public void printTeamDetails()
